@@ -25,7 +25,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         Optional<User> userOptional = userService.findByEmail(username);
         if (userOptional.isPresent()) {
             User user = userOptional.get();
-            org.springframework.security.core.userdetails.User.UserBuilder userBuilder = withUsername(username);
+            org.springframework.security.core.userdetails.User.UserBuilder userBuilder =
+                    withUsername(username);
             userBuilder.password(user.getPassword());
             userBuilder.roles(user.getRoles().stream()
                     .map(Role::getRoleName)

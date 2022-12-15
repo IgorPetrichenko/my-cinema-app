@@ -1,8 +1,8 @@
 package cinema.controller;
 
-import cinema.model.CinemaHall;
 import cinema.dto.request.CinemaHallRequestDto;
 import cinema.dto.response.CinemaHallResponseDto;
+import cinema.model.CinemaHall;
 import cinema.service.CinemaHallService;
 import cinema.service.mapper.RequestDtoMapper;
 import cinema.service.mapper.ResponseDtoMapper;
